@@ -1,0 +1,241 @@
+*{
+  padding:0;
+  margin: 0;
+}
+body{
+  height: 100%;
+  background: #c9edff;
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 200;
+  font-size: 1.1rem;
+}
+body #swamp-logo{
+  height: 75px;
+  position: absolute;
+  left: 0;
+}
+body #game_title{
+  font-family: 'VT323', monospace;
+  font-size: 7rem;
+  text-transform: uppercase;
+  padding-top: 80px;
+/*     -webkit-animation: color-change 0.5s infinite;
+    -moz-animation: color-change 0.5s infinite;
+    -o-animation: color-change 0.5s infinite;
+    -ms-animation: color-change 0.5s infinite;
+    animation: color-change 0.5s infinite; */
+}
+@-webkit-keyframes color-change {
+    0% { color: red; }
+    25% { color: yellow;}
+    50% { color: blue; }
+    75% { color: green; }
+    100% { color: red; }
+}
+body .container{
+  padding-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+body h1{
+  
+}
+body p{
+  font-size: 1.9rem;
+  color: #3CBC8D;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+body #score_count{
+  position: absolute;
+  border-radius: 3px;
+  width: 70px;
+  height: 70px;
+  left: 2vh;
+  top: 235px;
+  padding: 5px;
+}
+body .left-column{
+position: relative;
+}
+body .left-column .btns{
+  padding: 20px;
+}
+body .left-column .btns .team-player{
+  margin: 15px;
+  
+    padding-left: 13px;
+
+}
+body .left-column .btns form{
+height: 20px;
+/* margin: 50px 0; */
+}
+body .left-column .btns .input-form{
+  border-bottom: #3CBC8D solid;
+  border-left: #3CBC8D solid;
+  background-color: #c9edff;
+  width: 250px;
+  padding-left: 4px;
+
+}
+body .left-column .btns button{
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	position: relative;
+}
+body .left-column .btns button::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	border: 1px solid rgba(255,255,255,0.5);
+	background-color:rgba(66, 134, 244,0.1);
+}
+body .left-column .btns button::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	border: 1px solid rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.25);
+}
+body .left-column input[type=text], input[type=submit] {
+  color: white;
+  height: 40px;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  color: #3CBC8D;
+}
+body .left-column input[type=submit]{
+ padding: 0 10px;
+}
+body .left-column .btns h1{
+  padding-bottom: 40px;
+}
+body .left-column .nickname{
+  padding-top: 40px;
+}
+body .left-column .nickname p{
+/*   doesnt work */
+ transition: all 1s ease-in;
+  
+}
+body .right-column #score-logo{
+  height: 150px;
+}
+body .right-column h1{
+  
+
+}
+body .right-column #winning-teams{
+  font-family: 'Faster One', cursive;
+  font-size: 6.8vh;
+  transform: scale(.6, 1.2);
+  letter-spacing: 9px;
+  color: #FA5858;
+}
+span{
+/*   team name  */
+  font-family: 'VT323', monospace;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+#playing-team{
+   font-size: 3rem;
+}
+#nicknames{
+  padding-top: 14px;
+  font-size: 1.7rem;
+
+}
+input{
+  width: 150px;
+}
+#lost-btn{
+/*     color: white; */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: relative;
+}
+/* restart button start */
+/* https://codepen.io/sazzad/pen/yNNNJG?editors=1100 */
+a.animated-button:link, a.animated-button:visited {
+      width: 250px;
+
+	position: relative;
+	display: block;
+	margin: 10px auto 0;
+	padding: 14px 10px;
+	color: #fff;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button.thar-two {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid #F7CA18;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+a.animated-button.thar-two:hover {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: ntwo;
+}
+a.animated-button.thar-two:hover:before {
+	top: 0%;
+	bottom: auto;
+	height: 100%;
+}
+a.animated-button.thar-two:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: #F7CA18;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+/* restart button end */
