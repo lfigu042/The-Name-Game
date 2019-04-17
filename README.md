@@ -10,4 +10,6 @@ The team loses when a player fails to remember someones name and/or the assigned
 now click the "get score' button which will reset the board and ask for a new team name.
 The three teams with the highest score will be added to the highscore board :)
 
+I have also hosted this game on codepen.io for anyone to play without having to download the files
+https://codepen.io/lfigu042/pen/JVEaze?editors=1010
 
