@@ -1,3 +1,11 @@
+//made with SCSS
+// variables
+$background-blue: #c9edff;
+$green: #3CBC8D;
+$font-source-code: 'Source Code Pro', monospace;
+$font-hand: 'Gloria Hallelujah', cursive;
+$font-title: 'VT323', monospace;
+$font-winner: 'Akronim', cursive;
 
 *{
   padding:0;
@@ -5,223 +13,196 @@
 }
 body{
   height: 100%;
-  background: #c9edff;
+  background: $background-blue;
   text-align: center;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: 200;
-  font-size: 1.1rem;
-}
-body #swamp-logo{
-  height: 75px;
-  position: absolute;
-  left: 0;
-}
-body #game_title{
-  font-family: 'VT323', monospace;
-  font-size: 7rem;
-  text-transform: uppercase;
-  padding-top: 80px;
-/*   -webkit-animation: color-change 0.7s infinite;
+  font-family: $font-source-code;
+    #swamp-logo{
+    height: 75px;
+    position: absolute;
+    left: 0;
+    }
+   #game_title{
+    font-family: $font-title;
+    font-size: 7rem;
+    text-transform: uppercase;
+    padding-top: 80px;
+  /*-webkit-animation: color-change 0.7s infinite;
     -moz-animation: color-change 0.7s infinite;
     -o-animation: color-change 0.7s infinite;
     -ms-animation: color-change 0.7s infinite;
     animation: color-change 0.7s infinite; */
-}
-@-webkit-keyframes color-change {
+  }
+  @-webkit-keyframes color-change {
     0% { color: red; }
     25% { color: yellow;}
     50% { color: blue; }
     75% { color: green; }
     100% { color: red; }
-}
-body .container{
-  padding-top: 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-body h1{
-  
-}
-body p{
-  font-size: 1.9rem;
-  color: #3CBC8D;
-  font-family: 'Gloria Hallelujah', cursive;
-}
-body #score_count{
-  position: absolute;
-  border-radius: 3px;
-  width: 70px;
-  height: 70px;
-  left: 2vh;
-  top: 235px;
-  padding: 5px;
-}
-body .left-column{
-position: relative;
-}
-body .left-column .btns{
-  padding: 20px;
-}
-body .left-column .btns .team-player{
-  margin: 15px;
-  padding-left: 13px;
+  }
+  p{
+    font-size: 1.9rem;
+    color: $green;
+    font-family: $font-hand;
+  }
+  span{
+    /*team name  and score*/
+    font-family: $font-title;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+  }
+  input{
+    width: 150px;
+  }
+  .container{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .column{
+      
+    }
+    .left-column{
+      
+    }
+    .middle-column{
+      input[type=text], input[type=submit]{
+        height: 40px;
+        padding: 0 10px;
+        border: none;
+        font-size: 1.4rem;
+        border-radius: 3px;
+        color: $green;
+       }
+      .btns{
+        display: flex;
+        flex-direction: column;
+        h1{
+          padding-bottom: 40px;
+        }
+        .input-lines{
+          padding-bottom: 25px;
+        }
+        .nickname{
+          padding-top: 40px;
+        }
+        #score_team_wrapper{
+          display: flex;
+          
+          #playing-team{
+            font-size: 3rem;
+            text-align: middle;
+            position: absolute;
+            margin-left: 88px;
+           }
+        }
+        #player-name-input{
+          visibility:hidden;
+        }   
+        .team-player{    
+          .input-form{
+            border-bottom: $green solid;
+            border-left: $green solid;
+            background-color: $background-blue;
+            width: 250px;
+            padding-left: 4px;
+          }          
+        }
+        button{
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+         }
 
-}
-body .left-column .btns #team-name-input{
+      }//end of .btns
+      #get-score{
+        visibility: hidden;
+        /* restart button start */
+        /* https://codepen.io/sazzad/pen/yNNNJG?editors=1100 */
+        a.animated-button:link, a.animated-button:visited {
+          width: 250px;
+          position: relative;
+          display: block;
+          margin: 10px auto 0;
+          padding: 14px 10px;
+          color: #fff;
+          font-size:14px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          overflow: hidden;
+          letter-spacing: .08em;
+          border-radius: 0;
+          text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+          -webkit-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -o-transition: all 1s ease;
+          transition: all 1s ease;
+        }
+        a.animated-button.thar-two{
+          color: #fff;
+          cursor: pointer;
+          display: block;
+          position: relative;
+          border: 2px solid #F7CA18;
+          transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+        }
+        a.animated-button.thar-two:hover {
+          color: #000 !important;
+          background-color: transparent;
+          text-shadow: ntwo;
+        }
+        a.animated-button.thar-two:hover:before {
+          top: 0%;
+          bottom: auto;
+          height: 100%;
+        }
+        a.animated-button.thar-two:before {
+          display: block;
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          height: 0px;
+          width: 100%;
+          z-index: -1;
+          content: '';
+          color: #000 !important;
+          background: #F7CA18;
+          transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+        }
+      }/* restart button end */
+      .nickname{
+        #nicknames{
+          visibility: hidden;
+          padding-top: 14px;
+          font-size: 1.7rem;
+        }
+      }
+    }//end of middle column
+    
+    .right-column{
+      #score-logo{
+        height: 150px;
+      }
+      #highscores-wrapper{
+        padding: 15px;
+      }
+      .winning-teams{
+        font-family: $font-winner;
+      }
+      #gold-winner{
+        font-size: 8vh;
+        color: rgb(237, 209, 2);
+      }
+      #silver-winner{
+        font-size: 7vh;
+        color: rgb(192,192,192); 
+      }
+      #bronze-winner{
+        font-size: 6.3vh;
+        color: rgb(205,127,50); 
+      }
+    }//end of right column
+  }//end of container  
+}// end of body
 
-}
-body .left-column .btns #player-name-input{
-  visibility:hidden
-}
-body .left-column .btns form{
-height: 20px;
-}
-body .left-column .btns .input-form{
-  border-bottom: #3CBC8D solid;
-  border-left: #3CBC8D solid;
-  background-color: #c9edff;
-  width: 250px;
-  padding-left: 4px;
-}
-body .left-column .btns button{
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.4rem;
-  cursor: pointer;
-	position: relative;
-}
-body .left-column input[type=text], input[type=submit] {
-  color: white;
-  height: 40px;
-  border: none;
-  font-size: 1.4rem;
-  border-radius: 3px;
-  color: #3CBC8D;
-}
-body .left-column input[type=submit]{
- padding: 0 10px;
-}
-body .left-column .btns h1{
-  padding-bottom: 40px;
-}
-body .left-column .nickname{
-  padding-top: 40px;
-}
-body .left-column .nickname p{
-/*   doesnt work */
- transition: all 1s ease-in;
-  
-}
-body .right-column #score-logo{
-  height: 150px;
-}
-body .right-column #highscores-wrapper{
-  padding: 15px;
-}
-body .right-column .winning-teams{
-  font-family: 'Faster One', cursive;
-  transform: scale(.7, 1.2);
-  letter-spacing: 17px;
-}
-body .right-column #gold-winner{
-  font-size: 7.5vh;
-  color: rgb(237, 209, 2);
-}
-body .right-column #silver-winner{
-  font-size: 7vh;
-  color: rgb(192,192,192); 
-}
-body .right-column #bronze-winner{
-  font-size: 6.3vh;
-  color: rgb(205,127,50); 
-}
-span{
-/*   team name  */
-  font-family: 'VT323', monospace;
-  font-size: 2.5rem;
-  padding-bottom: 10px;
-}
-#playing-team{
-  font-size: 3rem;
-  position: absolute;
-  left: 149px;
-  top: 29px;
-}
-#nicknames{
-  padding-top: 14px;
-  font-size: 1.7rem;
-
-}
-input{
-  width: 150px;
-}
-#lost-btn{
-/*     color: white; */
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    position: relative;
-}
-/* restart button start */
-/* https://codepen.io/sazzad/pen/yNNNJG?editors=1100 */
-a.animated-button:link, a.animated-button:visited {
-  width: 250px;
-	position: relative;
-	display: block;
-	margin: 10px auto 0;
-	padding: 14px 10px;
-	color: #fff;
-	font-size:14px;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	overflow: hidden;
-	letter-spacing: .08em;
-	border-radius: 0;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-}
-a.animated-button.thar-two {
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	position: relative;
-	border: 2px solid #F7CA18;
-	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-a.animated-button.thar-two:hover {
-	color: #000 !important;
-	background-color: transparent;
-	text-shadow: ntwo;
-}
-a.animated-button.thar-two:hover:before {
-	top: 0%;
-	bottom: auto;
-	height: 100%;
-}
-a.animated-button.thar-two:before {
-	display: block;
-	position: absolute;
-	left: 0px;
-	bottom: 0px;
-	height: 0px;
-	width: 100%;
-	z-index: -1;
-	content: '';
-	color: #000 !important;
-	background: #F7CA18;
-	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-/* restart button end */
-
-/* visibility will be restored when team name is entered */
-#get-score, #nicknames, #player-name-input{
-  visibility: hidden;
-}
