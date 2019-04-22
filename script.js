@@ -194,3 +194,5 @@ function find_best_three(arr){
     document.getElementById("bronze-winner").innerHTML = third_place_name+"-"+third_place_score;
   }
 }
+
+
