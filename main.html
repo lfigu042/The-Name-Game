@@ -4,55 +4,57 @@
   <script type="text/javascript" src="script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
-<!--   font-family: 'Faster One', cursive; -->
+  <link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   <title>Name Game</title>
 </head>
 <body>
-  <div id="score_count">
-    <span>score</span>
-    <p id="player_score">0</p>
-  </div>
   <img src="http://2016.swamphacks.com/images/swamphacks-logo.png" alt="swamphacks logo" id="swamp-logo">
   <h1 id="game_title">The Name Game</h1>
+  
   <div class="container">
-    <div class="left-column">    
-      <div class="btns">
-        <!--JS will display the team name here-->
-        <span id="playing-team"></span>
-        
-        <div class= "team-player" id="team-name-input"><!-- new team form -->
-          <input class="input-form" id="team-form" type="text" name="teamName" placeholder="Enter new team's name">
-          <button id="new-team-btn" onclick="assign_team()"><input type="submit" value="New Team"></button>
-        </div>
-        <div class= "team-player"  id="player-name-input"><!--send player name to JS name variable  -->
+    <!--first column -->
+    <div class="left-column column" id="score_count">
+      <span>score</span>
+      <p id="player_score">0</p>
+    </div><!--end of left column -->
+    <!--second column -->
+    <div class="middle-column column">
+      <div class="btns">  
+        <!--set score and new team form side by side -->
+        <div class="input-lines" id="score_team_wrapper">
+            <div class= "team-player" id="team-name-input"><!-- new team form -->
+              <input class="input-form" id="team-form" type="text" name="teamName" placeholder="Enter new team's name">            
+              <button id="new-team-btn" onclick="assign_team()"><input type="submit" value="New Team"></button>
+            </div>
+            <!--JS will display the team name here-->
+            <span id="playing-team"></span>            
+        </div>        
+        <div class= "team-player input-lines"  id="player-name-input"><!--send player name to JS name variable  -->
           <input class="input-form" id="input-form" type="text" name="firstname" placeholder="Enter player name">
           <button id="submit-btn" onclick="assign_name()">
             <input type="submit" value="Submit">
           </button>
         </div>
+        <!--Lost/restart button -->
+        <div class="input-lines" id="get-score" onclick="getScore()"><a href="#" class="btn btn-sm animated-button thar-two">Get Score</a></div>
+        <!-- End of restart button -->
       </div>
-      
-      <!--Lost/restart button -->
-      <div id="get-score" onclick="getScore()"><a href="#" class="btn btn-sm animated-button thar-two">Get Score</a></div>
-      <!-- End of restart button -->
+
       <div class="nickname">
-<!--         <span id="playing-team"></span> -->
         <h1 id="nicknames">Rememeber these:</h1>
         <div id= "players-nicknames-container">
           <p id="final_name"></p>
-        </div>
-        
+        </div>   
       </div>
-    </div> <!--end of right column -->
-    
-    <div class="right-column">
+    </div> <!--end of middle column -->
+    <!--third column -->
+    <div class="right-column column">
       <img id="score-logo" src="https://c10.patreonusercontent.com/3/eyJ3Ijo0MDB9/patreon-media/p/reward/2700645/3a91fd01cb12426e9ce8181f9f318018/2?token-time=2145916800&token-hash=aPOTRMCfdGnGe7H5FBGYDtqAHI2pZYN8K2i0med9Ia8%3D" alt="trophy gif">
       <div id= "highscores-wrapper"><h1>Highscores: </h1></div>
       <p class = "winning-teams" id = "gold-winner"></p>
       <p class = "winning-teams" id = "silver-winner"></p>
       <p class = "winning-teams" id = "bronze-winner"></p>
-    </div><!--END of .right-column -->
+    </div><!--end of right column -->
   </div>
 </body>
